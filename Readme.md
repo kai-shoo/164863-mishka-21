@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Kai Shoo](https://up.htmlacademy.ru/adaptive/21/user/164863).
-* Наставник: `Неизвестно`.
+- Студент: [Kai Shoo](https://up.htmlacademy.ru/adaptive/21/user/164863).
+- Наставник: [Евгений Петров](https://htmlacademy.ru/profile/id617077).
 
 ---
 
