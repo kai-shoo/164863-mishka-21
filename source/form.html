@@ -2,13 +2,14 @@
 <html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Вязание на заказ</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
 </head>
 
 <body class="page__body">
+
   <header class="page-header">
-    <a href="index.html" class="page-header__logo logo">
+    <a href="#" class="page-header__logo logo">
       <img src="https://via.placeholder.com/86x35" alt="Логотип магазина Мишка">
     </a>
     <nav class="main-nav">
@@ -21,7 +22,7 @@
             <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
             <a href="#">Новые поступления</a>
@@ -50,12 +51,13 @@
             </a>
           </li>
         </ul>
-        <small>
+        <p>
           Бесплатная доставка по Росии
-        </small>
+        </p>
       </div>
     </nav>
   </header>
+
   <main class="page-form container">
 
     <section class="form">
@@ -66,97 +68,96 @@
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
         уточнить детали.
       </p>
-      <form class="form-radio__wrapper" action="post">
-        <fieldset class="form-radio__type">
-          <legend class="form-radio__legend">
+      <form class="form" action="post">
+        <fieldset class="form__wrapper">
+          <legend class="form__legend">
             Тип:
           </legend>
-          <ul class="form-radio__list">
-            <li class="form-radio__item">
-              <label class="form-radio__label">
-                <input class="form-radio__input" name="type" value="accessory">
-                <span class="form-radio__icon"></span>
+          <ul class="form__list">
+            <li class="form__radio">
+              <label class="form__label">
+                <input class="form__input--radio visually-hidden" name="type" value="accessory">
+                <span class="form__box--radio"></span>
                 Аксессуар для интерьера
               </label>
             </li>
-            <li class="form-radio__item">
-              <label class="form-radio__label">
-                <input class="form-radio__input" type="radio" name="type" value="toy">
-                <span class="form-radio__icon"></span>
+            <li class="form__radio">
+              <label class="form__label">
+                <input class="form__input--radio visually-hidden" type="radio" name="type" value="toy">
+                <span class="form__box--radio"></span>
                 Детская игрушка
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-check__wrapper">
-          <legend class="form-check__legend">
+        <fieldset class="form__wrapper">
+          <legend class="form__legend">
             Цвет:
           </legend>
-          <ul class="form-check__list">
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="Белый" checked>
-                <span class="form-radio__icon"></span>
+          <ul class="form__list--width--full">
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="Белый" checked>
+                <span class="form__box--check"></span>
                 Белый
               </label>
             </li>
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="grey" checked>
-                <span class="form-radio__icon"></span>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="grey" checked>
+                <span class="form__box--check"></span>
                 Серый
               </label>
             </li>
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="tiffany">
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="tiffany">
                 &laquo;Тиффани&raquo;
-                <span class="form-radio__icon"></span>
+                <span class="form__box--check"></span>
               </label>
             </li>
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="black">
-                <span class="form-radio__icon"></span>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="black">
+                <span class="form__box--check"></span>
                 Черный
               </label>
             </li>
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="pink">
-                <span class="form-radio__icon"></span>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="pink">
+                <span class="form__box--check"></span>
                 Розовый
               </label>
             </li>
-            <li class="form-check__item">
-              <label class="form-check__label">
-                <input class="form-check__input visually-hidden" type="checkbox" name="orange">
-                <span class="form-radio__icon"></span>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__input--check visually-hidden" type="checkbox" name="orange">
+                <span class="form__box--check"></span>
                 Оранжевый
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form-fullname">
-          <legend class="form-fullname__legend">
+        <fieldset class="form__wrapper">
+          <legend class="form__legend">
             ФИО
           </legend>
-          <ul class="form-fullname__list">
-            <li class="form-fullname__item">
-              <label class="form-fullname__label">
-                <input class="form-fullname__input" type="text" name="firstname" placeholder="Введите ваше имя*"
-                  required>
+          <ul class="form__list">
+            <li class="form__fullname">
+              <label class="form__label">
+                <input class="form__input--text" type="text" name="firstname" placeholder="Введите ваше имя*" required>
                 Имя:
               </label>
             </li>
-            <li class="form-fullname__item">
-              <label class="form-fullname__label">
-                <input class="form-fullname__input" type="text" name="lastname" placeholder="Укажите фамилию*" required>
+            <li class="form__fullname">
+              <label class="form__label">
+                <input class="form__input--text" type="text" name="lastname" placeholder="Укажите фамилию*" required>
                 Фамилия:
               </label>
-            <li class="form-fullname__item">
-              <label class="form-fullname__label">
-                <input class="form-fullname__input" type="text" name="middlename" placeholder="Отчество, если желаете">
+            <li class="form__fullname">
+              <label class="form__label">
+                <input class="form__input--text" type="text" name="middlename" placeholder="Отчество, если желаете">
                 Отчество:
               </label>
             </li>
