@@ -1,0 +1,25 @@
+.identity {
+  background-color: @seashell;
+  background-image: url(../../img/identity.png);
+  background-repeat: no-repeat;
+}
+
+.identity__title {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+  color: black;
+}
+
+.identity__link {
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  &:nth-child(odd) {
+    background-color: @downy;
+  }
+  &:nth-child(even) {
+    background-color: @fountain-blue;
+  }
+}
