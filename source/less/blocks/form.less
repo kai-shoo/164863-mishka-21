@@ -1,0 +1,46 @@
+.form__text {
+  font-family: @font-family-basic;
+  font-style: normal;
+  font-weight: normal;
+  .font-height(13px, 24px);
+  color: @tundora;
+}
+
+.form__wrapper {
+  border: none;
+}
+
+.form__legend {
+  font-family: @font-family-basic;
+  font-style: normal;
+  font-weight: bold;
+  .font-height(17px, 16px);
+  text-transform: uppercase;
+  color: @downy;
+}
+
+.form__label {
+  font-family: @font-family-basic;
+  font-style: normal;
+  font-weight: bold;
+  .font-height(17px; 18px);
+  color: @black;
+}
+
+.form__input {
+  &--placeholder::placeholder {
+    font-family: @font-family-basic;
+    font-style: normal;
+    font-weight: normal;
+    .font-height(17px; 18px);
+    color: fade(@black, 30%);
+  }
+}
+
+.form__note {
+  font-family: @font-family-basic;
+  font-style: normal;
+  font-weight: normal;
+  .font-height(14px; 16px);
+  color: @tundora;
+}

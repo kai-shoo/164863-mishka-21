@@ -1,0 +1,26 @@
+.page {
+  font-family: @font-family-basic;
+  background-color: white;
+  color: @black;
+  height: 100%;
+}
+
+.page__text {
+  font-family: @font-family-basic;
+  font-style: normal;
+  font-weight: normal;
+  .font-height(13px; 24px);
+  color: @tundora;
+}
+
+.page__title {
+  .font-height(27px; 30px);
+  background-color: @seashell;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -19,22 +20,22 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a href="catalog.html" class="site-list__link">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a href="form.html" class="site-list__link">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Новые поступления</a>
+            <a href="#" class="site-list__link">Новые поступления</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Распродажа</a>
+            <a href="#" class="site-list__link">Распродажа</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <!-- could be label+input #later -->
-            <a href="#">
+            <a href="#" class="user-list__link">
               <svg class="user-list__login-icon" width="21" height="18">
                 <use xlink:href="img/sprite.svg#icon-login"></use>
               </svg>
@@ -43,7 +44,7 @@
 
           </li>
           <li class="user-list__item">
-            <a href="#">
+            <a href="#" class="user-list__link">
               <svg class="user-list__login-icon" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-login"></use>
               </svg>
@@ -51,7 +52,7 @@
             </a>
           </li>
         </ul>
-        <p>
+        <p class="main-nav__note">
           Бесплатная доставка по Росии
         </p>
       </div>
@@ -59,7 +60,7 @@
   </header>
 
   <main class="page-main container">
-    <h1 class="vissually-hidden">Магазин экологически чистых и милых товаров ручного производства для детей и для дома
+    <h1 class="visually-hidden">Магазин экологически чистых и милых товаров ручного производства для детей и для дома
     </h1>
     <section class="identity">
       <h2 class="identity__title">Милые штуки ручной работы для дома</h2>
@@ -69,7 +70,7 @@
 
     <section class="promo">
       <h2 class="promo__heading">Товар недели</h2>
-      <h3 class="promo__title">Вязанные корзинки</h3>
+      <h3 class="promo__title title">Вязанные корзинки</h3>
       <p class="promo__desc">
         Экологически чистая пряжа,
         ручная работа. Доступны в шести расцветках, и трех размерах.
@@ -141,14 +142,31 @@
         <li class="slider__item review">
           <blockquote class="review__block-quote">
             <p class="review__quote">
-              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
-              инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
-              стильными, а также набирают больше лайков!
+              Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у
+              популярных инстамамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!
             </p>
             <div class="review__author">
               Екатерина Красильникова
               <cite class="review__source">
                 @misssssiskras2
+              </cite>
+            </div>
+          </blockquote>
+        </li>
+        <li class="slider__item review">
+          <blockquote class="review__block-quote">
+            <p class="review__quote">
+              Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у
+              популярных инстамамочек. В отчаянии, я накупила аксессуаров
+              и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают
+              больше лайков!
+            </p>
+            <div class="review__author">
+              Екатерина Красильникова
+              <cite class="review__source">
+                @misssssiskras3
               </cite>
             </div>
           </blockquote>
