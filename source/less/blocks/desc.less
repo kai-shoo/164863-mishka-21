@@ -1,6 +1,20 @@
 .desc__list {
+  display: grid;
+
   .list-style-reset;
   font-family: @font-family-basic;
   font-weight: bold;
   .font-height(17px; 20px);
+
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 350px 350px;
+    justify-content: center;
+  }
+
 }
