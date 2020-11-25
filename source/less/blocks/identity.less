@@ -1,14 +1,37 @@
 .identity {
   background-color: @seashell;
-  background-image: url"(../../img/identity.png)";
+  background-image: url("../img/identity.png");
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 88vw;
+  max-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: end;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .identity__title {
+  justify-self: center;
   .font-height(27px; 30px);
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .identity__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 103px;
+
   color: white;
   font-weight: bold;
   .font-height(19px; 24px);
