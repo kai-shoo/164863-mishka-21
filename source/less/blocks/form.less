@@ -39,6 +39,7 @@
   .font-height(17px, 16px);
   text-transform: uppercase;
   color: @downy;
+
   @media (min-width: @tablet-width) {
     width: 167px;
   }
@@ -47,6 +48,7 @@
 .form__labels {
   width: 100%;
   max-width: 700px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
@@ -55,6 +57,7 @@
       flex-wrap: nowrap;
       display: flex;
     }
+
     &--check {
       display: flex;
       flex-direction: row;
@@ -69,15 +72,18 @@
   font-weight: bold;
   .font-height(17px; 18px);
   color: @black;
+
   &--check {
     @media (min-width: @tablet-width) {
       flex-basis: 50%;
     }
   }
+
   @media (max-width: @mobile-width-only) {
     display: flex;
     flex-direction: column;
   }
+
   @media (min-width: @tablet-width) {
     display: block;
   }
