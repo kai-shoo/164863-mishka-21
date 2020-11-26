@@ -6,8 +6,30 @@
   color: @tundora;
 }
 
+.form__container {
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+  }
+}
+
 .form__wrapper {
   border: none;
+
+  @media (min-width: @tablet-width) {
+    &--grey {
+      background-color: @alabaster;
+    }
+  }
 }
 
 .form__legend {
@@ -17,6 +39,31 @@
   .font-height(17px, 16px);
   text-transform: uppercase;
   color: @downy;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+  }
+}
+
+.form__labels {
+  width: 100%;
+  max-width: 700px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+
+    &--radio {
+      flex-wrap: nowrap;
+      display: flex;
+    }
+
+    &--check {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .form__label {
@@ -25,6 +72,21 @@
   font-weight: bold;
   .font-height(17px; 18px);
   color: @black;
+
+  &--check {
+    @media (min-width: @tablet-width) {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .form__input {
@@ -43,4 +105,6 @@
   font-weight: normal;
   .font-height(14px; 16px);
   color: @tundora;
+
+  order: 2;
 }
