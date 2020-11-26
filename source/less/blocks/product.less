@@ -1,9 +1,39 @@
+.product {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
+}
+
+.product__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  &--desc {
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &--buy {
+    justify-content: space-between;
+  }
+  &--heading {
+    flex-direction: column;
+  }
+}
+
 .product__title {
   font-family: @font-family-basic;
   font-style: normal;
   font-weight: bold;
   .font-height(17px; 24px);
   color: @black;
+  margin: 0;
 }
 
 .product__price {
@@ -20,4 +50,5 @@
   font-weight: normal;
   .font-height(13px; 30px);
   color: @tundora;
+  margin: 0;
 }
