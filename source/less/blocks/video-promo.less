@@ -1,12 +1,12 @@
 .video-promo {
-  // @media (min-width: @tablet-width) {
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
 
-  // @media (min-width: @desktop-width) {
-  //   flex-direction: row;
-  // }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 
 .video-promo__title {
@@ -26,7 +26,12 @@
 }
 
 .video-promo__player {
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+  }
+
   @media (min-width: @desktop-width) {
-    float: left;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
