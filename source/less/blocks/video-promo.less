@@ -1,4 +1,15 @@
-.video__title {
+.video-promo {
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.video-promo__title {
   font-family: @font-family-basic;
   font-style: normal;
   font-weight: bold;
@@ -12,4 +23,15 @@
   font-weight: normal;
   .font-height(13px; 24px);
   color: @tundora;
+}
+
+.video-promo__player {
+  @media (min-width: @tablet-width) {
+    grid-row-start: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
