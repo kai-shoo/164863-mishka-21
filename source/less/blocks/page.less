@@ -16,6 +16,13 @@
 .page__title {
   .font-height(27px; 30px);
   background-color: @seashell;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+    align-items: center;
+    display: flex;
+    margin-top: -100px;
+  }
 }
 
 .page__body {
@@ -27,7 +34,24 @@
 }
 
 .page__wrapper {
-  background-color: @alabaster;
+  background-color: @seashell;
+
+  &--title {
+    background-color: @seashell;
+  }
+
+  &--identity {
+    background-color: @alabaster;
+
+    @media (min-width: @tablet-width) {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: -104px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: -90px;
+    }
+  }
 }
 
 .page__container {
@@ -41,5 +65,53 @@
   @media (min-width: @tablet-width) {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+
+.page__identity {
+  margin-bottom: 31px;
+}
+
+.page__promo {
+  .margin-block();
+}
+
+.page__desc {
+  .margin-block();
+}
+
+.page__slider {
+  .margin-block();
+}
+
+.page__divider {
+  background-image: url(../../img/zigzag-line-mobile.svg);
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 6px;
+  max-width: 1050px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    height: 20px;
+    background-image: url(../../img/zigzag-line-desktop.svg);
+  }
+
+  .margin-block();
+
+  &--in--block {
+    @media (min-width: @tablet-width) {
+      background-image: url(../../img/zigzag-line-links.svg);
+      max-width: none;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: -42px;
+      position: absolute;
+      height: 24px;
+      max-height: 34px;
+      background-repeat: repeat-x;
+    }
   }
 }

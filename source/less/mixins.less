@@ -8,3 +8,11 @@
   font-size: @size;
   line-height: @line-height;
 }
+
+.margin-block(@mobile: 36px ; @basic: 52px) {
+  margin-bottom: @mobile;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: @basic;
+  }
+}
