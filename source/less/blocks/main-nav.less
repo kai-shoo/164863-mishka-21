@@ -17,7 +17,7 @@
     grid-template-columns: 1fr auto 1fr;
     grid-template-areas:
       "s l u"
-      "s l n";
+      "s . n";
     max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
@@ -25,6 +25,10 @@
 }
 
 .main-nav__logo {
+  width: 86px;
+  height: 35px;
+  align-self: center;
+
   @media (min-width: @tablet-width) {
     grid-area: l;
   }
@@ -32,10 +36,25 @@
 
 .main-nav__toggle {
   position: absolute;
-  right: 0;
   top: 0;
-  width: 20px;
-  height: 14px;
+  right: 0;
+  z-index: 2;
+  width: 70px;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 20px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 5px 0 0 @black, 0 10px 0 0 @black;
+  }
 
   @media (min-width: @mobile-width-only) {
     display: none;
@@ -43,21 +62,19 @@
 }
 
 .main-nav__list {
-  .list-style-reset;
   color: @black;
   font-weight: bold;
-  .font-height(17px; 24px);
 
-  &--site {
+  @media (max-width: @mobile-width-only) {
     display: none;
-
-    @media (min-width: @tablet-width) {
-      grid-area: s;
-    }
   }
 
-  &--user {
-    @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    &--site {
+      grid-area: s;
+    }
+
+    &--user {
       grid-area: u;
     }
   }

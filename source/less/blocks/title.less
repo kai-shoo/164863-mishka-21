@@ -2,4 +2,14 @@
   color: @black;
   font-family: @font-family-basic;
   .font-height(25px; 30px);
+  margin: 0;
+  padding: 0;
+
+  &--mobile {
+    .font-height(18px; 30px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-height(43px; 50px);
+  }
 }
