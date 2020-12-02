@@ -51,3 +51,34 @@
 .user-list__icon {
   position: absolute;
 }
+
+.user-list__search {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    width: 66px;
+    margin-left: 13px;
+  }
+
+  &--text {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.user-list__cart {
+  @media (min-width: @tablet-width) {
+    margin-right: -10px;
+    width: 275px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.user-list__cart-icon {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

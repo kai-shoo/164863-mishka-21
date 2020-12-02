@@ -1,6 +1,5 @@
 .desc__list {
   display: grid;
-
   .list-style-reset;
   font-family: @font-family-basic;
   font-weight: bold;
@@ -8,6 +7,11 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 110px;
+    grid-auto-flow: column;
+
+    .font-height(20px; 22px);
   }
 
   @media (min-width: @desktop-width) {
@@ -17,9 +21,52 @@
 }
 
 .desc__title {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 98px;
+  }
+
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 350px 350px;
-    justify-content: center;
+    margin-left: 175px;
+  }
+}
+
+// .desc__item:nth-child(1) {
+//   &::before {
+//     @n: 1;
+//     content: "";
+//     position: absolute;
+//     width: 40px;
+//     height: 40px;
+//     background-image: url("../../img/icon-@{n}.svg");
+//     background-repeat: no-repeat;
+//     background-repeat: no-repeat;
+//   }
+// }
+
+.descGenerateIcons(@n) when (@n > 0) {
+  .desc__item:nth-child(@{n})::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: -8px;
+
+    width: 60px;
+    height: 40px;
+    background-image: url("../../img/icon-@{n}.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  .descGenerateIcons(@n - 1);
+}
+
+.descGenerateIcons(6);
+
+.desc__item {
+  margin-top: 83px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
   }
 }

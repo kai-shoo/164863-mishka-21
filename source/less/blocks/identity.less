@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-color: @alabaster;
-  background-position: top;
+  background-position: 0 -20px;
 
   width: 100%;
   height: 490px;
@@ -13,11 +13,14 @@
   align-content: flex-end;
 
   @media (min-width: @tablet-width) {
+    align-content: stretch;
+    align-items: flex-end;
+
     grid-template-columns: 1fr 1fr;
     padding-left: 50px;
     padding-right: 50px;
     max-width: 1150px;
-    height: 750px;
+    height: 742px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -25,18 +28,29 @@
 
 .identity__title {
   .font-height(27px; 30px);
-  height: 283px;
+  height: 232px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 0 30px;
+  margin-bottom: 50px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+    align-self: flex-start;
+    margin-top: 80px;
 
     .font-height(43px; 50px);
+  }
+}
+
+.identity__br {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: inline;
   }
 }
 

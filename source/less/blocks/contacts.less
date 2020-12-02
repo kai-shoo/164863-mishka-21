@@ -10,6 +10,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 160px 2fr 1fr;
     grid-template-areas:
       ". title   img"
       ". channel img"
@@ -20,11 +21,13 @@
 .contacts__info {
   @media (min-width: @tablet-width) {
     display: flex;
+    .font-height(17px; 30px);
+    align-items: baseline;
+    margin-top: 30px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
-
     grid-area: channel;
   }
 }
@@ -42,14 +45,21 @@
   font-style: normal;
   font-weight: bold;
   color: @black;
+  margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+  }
 
   @media (min-width: @desktop-width) {
     grid-area: title;
+    align-self: flex-end;
+    margin-bottom: 30px;
   }
 }
 
 .contacts__email {
   border-bottom: solid 2px @downy-light;
+  margin-bottom: 25px;
 }
 
 .contacts__button {

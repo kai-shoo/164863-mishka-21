@@ -24,7 +24,7 @@
       "dl   dl   img img"
       "p    p    img img"
       "b    b    img img";
-    grid-template-columns: 175px 175px 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media (min-width: @desktop-width) {
@@ -41,11 +41,23 @@
 .promo__heading {
   grid-area: h;
   align-self: center;
+
   color: @fountain-blue;
   font-weight: bold;
   text-transform: uppercase;
   .font-height(17px; 20px);
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    justify-self: end;
+    align-self: flex-start;
+    width: 50px;
+    margin-right: 38px;
+    margin-top: 8px;
+  }
 }
 
 .promo__parameters-lists {
@@ -54,6 +66,14 @@
 
   display: grid;
   grid-template-columns: max-content 1fr;
+  margin-bottom: 27px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 100px;
+  }
 }
 
 .promo__parameter-item {
@@ -65,9 +85,8 @@
 
 .promo__parameter-definition {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 30px;
   padding-top: 10px;
-  padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   max-width: 250px;
 }
@@ -78,9 +97,11 @@
   justify-content: center;
   font-weight: bold;
   .font-height(17px; 24px);
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     max-width: 280px;
+    margin-bottom: 34px;
 
     .font-height(20px; 24px);
   }
@@ -88,10 +109,15 @@
 
 .promo__image {
   grid-area: img;
+  margin-bottom: 9px;
 }
 
 .promo__title {
   grid-area: t;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
@@ -102,6 +128,7 @@
 
 .promo__button {
   grid-area: b;
+  height: 52px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -111,4 +138,12 @@
 
 .promo__desc {
   grid-area: desc;
+  margin-top: 20px;
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    .font-height(17px; 30px);
+    width: 85%;
+    margin-bottom: 23px;
+  }
 }
