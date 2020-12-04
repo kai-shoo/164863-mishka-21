@@ -8,10 +8,23 @@
   </head>
 
   <body class="page__body">
-    <header class="page-header">
+    <header class="page__header">
       <nav class="main-nav">
         <a href="#" class="main-nav__logo logo">
-          <img src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" />
+          <picture>
+            <source
+              media="(min-width: 1150px)"
+              srcset="img/mishka-logo-desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/mishka-logo-tablet.svg"
+            />
+            <img
+              src="img/mishka-logo-mobile.svg"
+              alt="Логотип магазина Мишка"
+            />
+          </picture>
         </a>
         <button class="main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
@@ -81,17 +94,35 @@
         детей и для дома
       </h1>
 
-      <div class="page__identity page__wrapper page__wrapper--identity">
+      <div class="wrapper wrapper--background--alabaster">
         <section class="identity">
           <h2 class="identity__title">
             Милые штуки <br class="identity__br" />ручной <br />работы для дома
           </h2>
-          <a href="#" class="identity__link">Предметы<br />интерьера</a>
-          <a href="#" class="identity__link">Детские<br />игрушки</a>
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="img/hero-desktop.png 1x, img/hero-desktop@2x.png 2x"
+            />
+            <img
+              class="identity__img"
+              src="img/hero-mobile.png"
+              srcset="img/hero-mobile@2x.png 2x"
+              alt="игрушечный домик внутри которого сидят вязаные игрушки кота и медвежёнка"
+            />
+          </picture>
+          <div class="identity__links container container--no--mobile">
+            <a href="#" class="identity__link identity__link--icon--lamp"
+              >Предметы<br />интерьера</a
+            >
+            <a href="#" class="identity__link identity__link--icon--lego"
+              >Детские<br />игрушки</a
+            >
+          </div>
         </section>
       </div>
 
-      <div class="page__divider page__divider--in--block"></div>
+      <div class="divider divider--in--block"></div>
 
       <section class="promo page__container page__promo">
         <h2 class="promo__heading">Товар недели</h2>
@@ -254,7 +285,6 @@
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--twitter">
-                
                 <span class="visually-hidden"> Твиттер </span>
               </a>
             </li>

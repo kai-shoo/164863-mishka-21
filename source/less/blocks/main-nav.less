@@ -1,8 +1,12 @@
 .main-nav {
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: $border-bottom;
   height: 100%;
 
   @media (min-width: @tablet-width) {
@@ -27,8 +31,6 @@
 }
 
 .main-nav__logo {
-  width: 86px;
-  height: 35px;
   align-self: center;
 
   @media (min-width: @tablet-width) {
