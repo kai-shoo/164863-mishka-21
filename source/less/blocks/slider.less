@@ -1,9 +1,20 @@
 .slider {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    height: 457px;
+    padding-top: 83px;
+
+    background-image: url("../../img/review-bg.png");
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: max-content;
+
+    background-position: 50px;
   }
 }
 
@@ -25,6 +36,9 @@
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: -1;
+
+    margin-bottom: 32px;
+    height: max-content;
   }
 }
 
@@ -40,8 +54,8 @@
 .slider__button {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 78px;
+    right: -37px;
     transform: translate(-50%);
     width: 175px;
   }
@@ -51,7 +65,7 @@
   display: flex;
   align-items: stretch;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   width: 100%;
   height: 50px;
@@ -61,10 +75,15 @@
     position: absolute;
     width: 180px;
     border: none;
-    bottom: 0;
-    right: 40px;
+    bottom: 34px;
+    right: 47px;
 
-    transform: translateY(45%);
+    transform: translateY(50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -13px;
+    right: 47px;
   }
 }
 
