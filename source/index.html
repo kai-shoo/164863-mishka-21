@@ -124,7 +124,7 @@
 
       <div class="divider divider--in--block"></div>
 
-      <section class="promo page__container page__promo">
+      <section class="promo page__promo container">
         <h2 class="promo__heading">Товар недели</h2>
         <h3 class="promo__title title">Вязаные корзинки</h3>
         <p class="promo__desc">
@@ -142,11 +142,25 @@
           <dt class="promo__parameter-item">Высота:</dt>
           <dd class="promo__parameter-definition">15 см</dd>
         </dl>
-        <img
-          class="promo__image"
-          src="https://via.placeholder.com/260x315"
-          alt="Детские руки держат двухцветные вязанные корзины, вложенные друг в друга"
-        />
+        <picture class="promo__image">
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              img/triple-set-tablet.png    1x,
+              img/triple-set-tablet@2x.png 2x
+            "
+            srcset="
+              img/triple-set-desktop.png    1x,
+              img/triple-set-desktop@2x.png 2x
+            "
+          />
+          <img
+            class="promo__image"
+            src="img/triple-set-mobile.png"
+            srcset="img/triple-set-mobile@2x.png 2x"
+            alt="Детские руки держат двухцветные вязанные корзины, вложенные друг в друга"
+          />
+        </picture>
         <p class="promo__price">Цена: 990 руб.</p>
         <a href="#" class="promo__button button"> Заказать </a>
       </section>

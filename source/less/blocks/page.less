@@ -62,7 +62,11 @@
 }
 
 .page__promo {
-  .margin-block(30px; 50px; 80px);
+  margin-top: 31px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 50px;
+  }
 }
 
 .page__desc {

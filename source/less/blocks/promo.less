@@ -1,7 +1,4 @@
 .promo {
-  width: 100%;
-  max-width: 1150px;
-
   display: grid;
   grid-template-areas:
     "t"
@@ -11,6 +8,8 @@
     "img"
     "p"
     "b";
+  width: 100%;
+  max-width: 1150px;
 
   font-family: @font-family-basic;
   font-weight: normal;
@@ -41,34 +40,42 @@
 .promo__heading {
   grid-area: h;
   align-self: center;
+  margin-top: 0;
+  margin-bottom: 18px;
 
   color: @fountain-blue;
   font-weight: bold;
   text-transform: uppercase;
   .font-height(17px; 20px);
-  margin: 0;
-
   @media (min-width: @tablet-width) {
     display: flex;
-    text-align: center;
     justify-content: center;
     justify-self: end;
     align-self: flex-start;
+    text-align: center;
+
     width: 50px;
     margin-right: 38px;
-    margin-top: 8px;
+    margin-top: 5px;
+
+    .font-height(17px; 17px);
   }
 }
 
 .promo__parameters-lists {
   grid-area: dl;
-  .font-height(15px; 20px);
-
   display: grid;
   grid-template-columns: max-content 1fr;
-  margin-bottom: 27px;
+
+  margin-bottom: 29px;
+
+  .font-height(15px; 20px);
+
   @media (min-width: @tablet-width) {
-    margin-bottom: 36px;
+    grid-template-rows: repeat(auto-fill, 40px);
+
+    margin-top: 0;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -77,31 +84,45 @@
 }
 
 .promo__parameter-item {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  padding-bottom: 12px;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
 }
 
 .promo__parameter-definition {
+  max-width: 250px;
   margin: 0;
   padding-left: 30px;
-  padding-top: 10px;
+  padding-top: 7px;
+  padding-bottom: 12px;
+
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  max-width: 250px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
 }
 
 .promo__price {
   grid-area: p;
   display: flex;
   justify-content: center;
+
+  margin-bottom: 24px;
+  margin-top: 0;
+
   font-weight: bold;
   .font-height(17px; 24px);
-  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     max-width: 280px;
-    margin-bottom: 34px;
 
     .font-height(20px; 24px);
   }
@@ -109,14 +130,22 @@
 
 .promo__image {
   grid-area: img;
-  margin-bottom: 9px;
+
+  margin-bottom: 20px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
 }
 
 .promo__title {
   grid-area: t;
+  margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 38px;
   }
 
   @media (min-width: @desktop-width) {
@@ -128,6 +157,7 @@
 
 .promo__button {
   grid-area: b;
+
   height: 52px;
 
   @media (min-width: @tablet-width) {
@@ -138,12 +168,14 @@
 
 .promo__desc {
   grid-area: desc;
-  margin-top: 20px;
-  margin-bottom: 3px;
+
+  margin-top: 0;
+  margin-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    .font-height(17px; 30px);
     width: 85%;
-    margin-bottom: 23px;
+    margin-bottom: 40px;
+
+    .font-height(17px; 30px);
   }
 }
