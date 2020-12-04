@@ -30,34 +30,24 @@
   }
 }
 
-// .desc__item:nth-child(1) {
-//   &::before {
-//     @n: 1;
-//     content: "";
-//     position: absolute;
-//     width: 40px;
-//     height: 40px;
-//     background-image: url("../../img/icon-@{n}.svg");
-//     background-repeat: no-repeat;
-//     background-repeat: no-repeat;
-//   }
-// }
-
 .descGenerateIcons(@n) when (@n > 0) {
   .desc__item:nth-child(@{n})::before {
-    content: "";
-    position: absolute;
-    top: -55px;
-    left: -8px;
-
-    width: 60px;
-    height: 40px;
-    background-image: url("../../img/icon-@{n}.svg");
-    background-repeat: no-repeat;
-    background-position: top center;
+    content: url("../../img/icon-@{n}.svg");
   }
 
   .descGenerateIcons(@n - 1);
+}
+
+.desc__item::before {
+  position: absolute;
+  top: -32px;
+  transform: translateY(-50%);
+  left: -5px;
+
+  text-align: center;
+
+  width: 55px;
+  height: 38px;
 }
 
 .descGenerateIcons(6);

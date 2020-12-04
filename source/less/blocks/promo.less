@@ -47,6 +47,7 @@
   font-weight: bold;
   text-transform: uppercase;
   .font-height(17px; 20px);
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
@@ -59,6 +60,11 @@
     margin-top: 5px;
 
     .font-height(17px; 17px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 66px;
+    margin-top: 78px;
   }
 }
 
@@ -131,7 +137,7 @@
 .promo__image {
   grid-area: img;
 
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -145,13 +151,16 @@
   margin-bottom: 3px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
+    z-index: 1;
     grid-column-start: 2;
     grid-column-end: 7;
-    z-index: 1;
+
+    margin-top: 70px;
+    margin-bottom: 27px;
   }
 }
 
