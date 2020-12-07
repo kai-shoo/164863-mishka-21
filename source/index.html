@@ -149,6 +149,7 @@
               img/triple-set-tablet.png    1x,
               img/triple-set-tablet@2x.png 2x
             "
+            media="(min-width: 1150px)"
             srcset="
               img/triple-set-desktop.png    1x,
               img/triple-set-desktop@2x.png 2x
@@ -185,7 +186,7 @@
         </ul>
       </section>
 
-      <section class="slider page__container page__slider container">
+      <section class="slider page__slider container">
         <h2 class="slider__title title">Отзывы</h2>
         <ul class="slider__list">
           <li class="slider__item review">
@@ -248,58 +249,74 @@
         <a href="#" class="slider__button button"> Написать </a>
       </section>
 
-      <div class="page__divider"></div>
+      <div class="divider"></div>
 
-      <section class="contacts page__container page__contacts">
+      <section class="contacts page__contacts container">
         <h2 class="contacts__title title title--mobile">Контакты</h2>
         <dl class="contacts__info">
           <div class="contacts__channel">
             <dt>e-mail:</dt>
-            <dd class="contacts__email">
-              <a href="mailto:info@mimimishkashop.ru">
+            <dd class="contacts__email contacts__definition">
+              <a class="contacts__link" href="mailto:info@mimimishkashop.ru">
                 info@mimimishkashop.ru
               </a>
             </dd>
           </div>
           <div class="contacts__channel">
             <dt>адрес:</dt>
-            <dd>
+            <dd class="contacts__definition">
               г.&nbsp;Санкт-Петербург ул.&nbsp;Большая&nbsp;Конюшенная
               д.&nbsp;19/8, офис&nbsp;101
             </dd>
           </div>
         </dl>
-        <img
-          class="contacts__map"
-          src="https://via.placeholder.com/768x455"
-          alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"
-        />
+        <div class="contacts__map map">
+          <picture class="map__img">
+            <source
+              media="(min-width: 1150px)"
+              srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x"
+            />
+
+            <source
+              media="(min-width: 768px)"
+              srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x"
+            />
+            <img
+              class=""
+              src="img/map-mobile.png"
+              srcset="img/map-tablet@2x.png 2x"
+              alt="г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101"
+            />
+          </picture>
+          <div class="map__js" id="map"></div>
+        </div>
         <a href="#" class="contacts__button button"> Напишите нам </a>
       </section>
     </main>
-    <footer class="page__wrapper">
-      <div class="footer page__container">
+
+    <footer class="wrapper">
+      <div class="footer container">
         <a href="#" class="footer__logo logo">
-          <img
-            src="https://via.placeholder.com/19x30"
-            alt="Логотип магазина Мишка"
-          />
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" />
         </a>
         <div class="footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a href="#" class="social__link social__link--instagram">
+                <img src="img/insta.svg" alt="Инстаграм" />
                 <span class="visually-hidden"> Инстаграм </span>
               </a>
             </li>
             <li class="social__item">
-              <a href="#" class="social__link social__link--vkontakt">
-                <span class="visually-hidden"> Вконтакте </span>
+              <a href="#" class="social__link social__link--fb">
+                <img src="img/fb.svg" alt="Вконтакте" />
+                <span class="visually-hidden">Фэйсбук</span>
               </a>
             </li>
             <li class="social__item">
               <a href="#" class="social__link social__link--twitter">
-                <span class="visually-hidden"> Твиттер </span>
+                <img src="img/twitter.svg" alt="Твиттер" />
+                <span class="visually-hidden">Твиттер</span>
               </a>
             </li>
           </ul>
@@ -310,10 +327,53 @@
             class="copyright__link"
             href="https://htmlacademy.ru/intensive/adaptive"
           >
-            HTML Academy
+            <img src="img/htmlacademy.svg" alt="htmlacademy" />
           </a>
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__window cart container">
+        <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
+        <form class="cart__form" action="post">
+          <fieldset class="cart__fieldset">
+            <legend class="cart__legend">Выберите размер:</legend>
+            <label class="cart__label">
+              <input
+                class="visually-hidden cart__input"
+                type="radio"
+                name="size"
+                value="s"
+              />
+              <span class="cart__box">S</span>
+            </label>
+            <label class="cart__label">
+              <input
+                class="visually-hidden cart__input"
+                type="radio"
+                name="size"
+                value="l"
+              />
+              <span class="cart__box">L</span>
+            </label>
+            <label class="cart__label">
+              <input
+                class="visually-hidden cart__input"
+                type="radio"
+                name="size"
+                value="m"
+              />
+              <span class="cart__box">M</span>
+            </label>
+          </fieldset>
+          <button class="cart__button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=20224473-92dc-415f-ad95-b88d2f91cce2"
+      type="text/javascript"
+    ></script>
+    <script src="js/icon_customImage.js" type="text/javascript"></script>
   </body>
 </html>

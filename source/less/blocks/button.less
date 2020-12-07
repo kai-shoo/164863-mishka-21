@@ -11,4 +11,15 @@
   .font-height(18px; 20px);
 
   border: 2px solid @tundora;
+
+  &:hover {
+    color: @white;
+
+    background-color: @tundora;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @tundora;
+  }
 }
