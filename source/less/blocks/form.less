@@ -79,7 +79,7 @@
       display: grid;
       grid-template-columns: 170px 1fr;
       padding-top: 67px;
-      padding-bottom: 29px;
+      padding-bottom: 9px;
     }
 
     @media (min-width: @desktop-width) {
@@ -309,8 +309,9 @@
 }
 
 .form__name {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  row-gap: 18px;
   margin-left: -2px;
   margin-bottom: 22px;
 
@@ -319,7 +320,7 @@
     grid-template-columns: max-content 1fr;
     gap: 25px;
     align-items: baseline;
-    margin-bottom: 45px;
+    margin-bottom: 17px;
   }
 }
 
