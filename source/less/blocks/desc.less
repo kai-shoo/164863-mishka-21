@@ -30,28 +30,6 @@
   }
 }
 
-.descGenerateIcons(@n) when (@n > 0) {
-  .desc__item:nth-child(@{n})::before {
-    content: url("../../img/icon-@{n}.svg");
-  }
-
-  .descGenerateIcons(@n - 1);
-}
-
-.desc__item::before {
-  position: absolute;
-  top: -32px;
-  transform: translateY(-50%);
-  left: -5px;
-
-  text-align: center;
-
-  width: 55px;
-  height: 38px;
-}
-
-.descGenerateIcons(6);
-
 .desc__item {
   margin-top: 83px;
   position: relative;
@@ -59,4 +37,32 @@
   @media (min-width: @tablet-width) {
     margin-top: 0;
   }
+
+  &::before {
+    position: absolute;
+    top: -32px;
+    transform: translateY(-50%);
+    left: -5px;
+
+    text-align: center;
+
+    width: 55px;
+    height: 38px;
+  }
+
+  @icons: {
+    flower: "../../img/icon-1.svg";
+    style: "../../img/icon-2.svg";
+    heart: "../../img/icon-3.svg";
+    ball: "../../img/icon-4.svg";
+    rocket: "../../img/icon-5.svg";
+    gift: "../../img/icon-6.svg";
+  };
+
+  each(@icons, {
+      &--icon--@{key}::before {
+        content: url(@value);
+      }
+   }
+  );
 }
