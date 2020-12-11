@@ -65,21 +65,27 @@
 }
 
 .identity__links {
+  .list-style-reset;
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
+.identity__item {
+  flex-basis: 50%;
+  display: flex;
+}
+
 .identity__link {
   position: relative;
 
-  flex-basis: 50%;
-  display: flex;
+  display: block;
   padding-left: 30px;
   padding-top: 24px;
 
   height: 103px;
+  width: 100%;
 
   font-weight: bold;
   .font-height(19px; 24px);
