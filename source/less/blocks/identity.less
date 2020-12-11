@@ -8,6 +8,24 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
   }
+
+  &--wavy {
+    @media (min-width: @tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+
+        max-width: 100%;
+        width: 100%;
+        height: 24px;
+        max-height: 34px;
+
+        background-repeat: repeat-x;
+        background-image: url("../../img/zigzag-line-links.svg");
+      }
+    }
+  }
 }
 
 .identity__img {
@@ -84,7 +102,7 @@
   padding-left: 30px;
   padding-top: 24px;
 
-  height: 103px;
+  height: 130px;
   width: 100%;
 
   font-weight: bold;
