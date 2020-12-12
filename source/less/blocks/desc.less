@@ -50,6 +50,12 @@
     height: 38px;
   }
 
+  each(@icons, {
+    &--icon--@{key}::before {
+      content: url(@value);
+    }
+  });
+
   @icons: {
     flower: "../../img/icon-1.svg";
     style: "../../img/icon-2.svg";
@@ -58,11 +64,4 @@
     rocket: "../../img/icon-5.svg";
     gift: "../../img/icon-6.svg";
   };
-
-  each(@icons, {
-      &--icon--@{key}::before {
-        content: url(@value);
-      }
-    }
-  );
 }
