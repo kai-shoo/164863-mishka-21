@@ -1,10 +1,22 @@
 .product {
+  border: solid 1px @gallery;
+
+  padding-bottom: 10px;
+
   @media (min-width: @tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+
+    width: 316px;
+    min-height: 659px;
   }
 }
 
@@ -14,28 +26,65 @@
   }
 
   &--desc {
+    padding-left: 28px;
+    padding-right: 28px;
+
+    .font-height(17px; 24px);
+
     @media (min-width: @tablet-width) {
       flex-direction: column;
+
+      margin-top: 0px;
+      padding-top: 26px;
+      padding-left: 31px;
+    }
+
+    @media (min-width: @desktop-width) {
       justify-content: space-between;
+      height: 100%;
     }
   }
 
   &--buy {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    padding-top: 8px;
+    border-top: solid 1px @gallery;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: auto;
+    }
   }
 
   &--heading {
     flex-direction: column;
+    margin-bottom: 18px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 35px;
+    }
   }
 }
 
 .product__title {
+  margin: 0;
+  margin-bottom: 5px;
+
   font-family: @font-family-basic;
   font-style: normal;
   font-weight: bold;
   .font-height(17px; 24px);
   color: @black;
-  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .font-height(20px; 24px);
+  }
 }
 
 .product__price {
@@ -44,13 +93,43 @@
   font-weight: bold;
   .font-height(15px; 24px);
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    .font-height(17px; 24px;);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: auto;
+  }
 }
 
 .product__parameters {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-family: @font-family-basic;
   font-style: normal;
   font-weight: normal;
   .font-height(13px; 30px);
   color: @tundora;
-  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .font-height(15px; 30px);
+  }
+}
+
+.product__image {
+  display: block;
+  margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 462px;
+
+    object-fit: cover;
+  }
 }
