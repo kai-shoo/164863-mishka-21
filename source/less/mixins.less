@@ -9,10 +9,14 @@
   line-height: @line-height;
 }
 
-.margin-block(@mobile: 36px ; @basic: 52px) {
+.margin-block(@mobile: 36px ; @basic: 52px; @desktop: 130px) {
   margin-bottom: @mobile;
 
   @media (min-width: @tablet-width) {
     margin-bottom: @basic;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: @desktop;
   }
 }

@@ -1,0 +1,19 @@
+.divider {
+  border: none;
+  max-width: 100%;
+  height: 6px;
+
+  background-image: url("../../img/zigzag-line-mobile.svg");
+  background-repeat: repeat-x;
+
+  @media (min-width: @tablet-width) {
+    height: 20px;
+    background-image: url("../../img/zigzag-line-desktop.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 23px;
+    background-image: url("../../img/zigzag-line-desktop.svg");
+    width: 100%;
+  }
+}

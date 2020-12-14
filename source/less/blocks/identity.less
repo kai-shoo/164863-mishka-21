@@ -1,56 +1,174 @@
 .identity {
-  background-image: url("../img/identity.png");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-color: @alabaster;
-  background-position: top;
+  position: relative;
 
   width: 100%;
-  height: 490px;
 
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: flex-end;
+  background-color: @alabaster;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr;
-    padding-left: 50px;
-    padding-right: 50px;
-    max-width: 1150px;
-    height: 750px;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: row;
+  }
+
+  &--wavy {
+    @media (min-width: @tablet-width) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+
+        max-width: 100%;
+        width: 100%;
+        height: 24px;
+        max-height: 34px;
+
+        background-repeat: repeat-x;
+        background-image: url("../../img/zigzag-line-links.svg");
+      }
+    }
+  }
+}
+
+.identity__img {
+  display: flex;
+  justify-content: center;
+
+  height: 281px;
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  object-position: center -19px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 626px;
+    width: auto;
+
+    object-fit: none;
+    object-position: center -1px;
   }
 }
 
 .identity__title {
-  .font-height(27px; 30px);
-  height: 283px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  margin-top: 69px;
+
   text-align: center;
-  padding: 0 30px;
+  .font-height(27px; 30px);
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    margin-top: 155px;
 
     .font-height(43px; 50px);
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 155px;
+
+    .font-height(53px; 57px);
+  }
+}
+
+.identity__br {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: inline;
+  }
+}
+
+.identity__links {
+  .list-style-reset;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.identity__item {
+  flex-basis: 50%;
+  display: flex;
 }
 
 .identity__link {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  position: relative;
 
+  display: block;
   padding-left: 30px;
-  height: 103px;
+  padding-top: 24px;
 
-  color: white;
+  height: 103px;
+  width: 100%;
+
   font-weight: bold;
   .font-height(19px; 24px);
+  color: white;
+
+  transition: padding-top 0.25s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &--icon--lamp::before {
+    margin-right: 36px;
+    width: 40px;
+    height: 62px;
+
+    background-image: url("../../img/lamp.svg");
+  }
+
+  &--icon--lego::before {
+    margin-right: 27px;
+    width: 60px;
+    height: 60px;
+
+    background-image: url("../../img/lego.svg");
+  }
+
+  &::after {
+    //setup for animation
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: inherit;
+
+    transition: transform 0.25s ease-in-out;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 120px;
+    padding-left: 36px;
+
+    .font-height(20px; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 36px;
+  }
 
   &:nth-child(odd) {
     background-color: @downy;
@@ -60,13 +178,35 @@
     background-color: @fountain-blue;
   }
 
-  @media (min-width: @tablet-width) {
-    height: 120px;
+  // STATES
+
+  &:hover {
+    padding-top: 19px;
+
+    &:nth-child(odd) {
+      background-color: @viking;
+    }
+
+    &:nth-child(even) {
+      background-color: @puerto-rico;
+    }
+
+    &::after {
+      transform: translateY(-5px);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    &::before {
+      opacity: 0.7;
+
+      transform: translateY(-5px);
+      transition: transform 0.25s ease-in-out;
+    }
   }
 
-  @media (min-width: @desktop-width) {
-    .font-height(20px; 30px);
-
-    padding-left: 36px;
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
   }
 }

@@ -1,0 +1,190 @@
+.input {
+  &--phone,
+  &--email {
+    border-bottom: solid 2px @black;
+
+    &:hover,
+    &:focus-within {
+      border-bottom: solid 2px @downy-light;
+    }
+  }
+}
+
+.input__box {
+  position: relative;
+  background: inherit;
+
+  &::placeholder {
+    font-family: inherit;
+    font-weight: normal;
+    .font-height(17px; 18px);
+
+    opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      .font-height(19px; 18px);
+    }
+  }
+
+  &--radio {
+    width: 40px;
+    height: 40px;
+    margin-left: -2px;
+
+    border: solid 2px @tundora;
+    border-radius: 50%;
+
+    @media (min-width: @tablet-width) {
+      width: 50px;
+      height: 50px;
+    }
+
+    .input__logic:checked + &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+
+      border-radius: 50%;
+      background-color: @downy-light;
+
+      @media (min-width: @tablet-width) {
+        width: 21px;
+        height: 21px;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:hover,
+    .input__logic:focus + & {
+      border-color: @downy-light;
+    }
+
+    &:active {
+      border-color: fade(@black; 30%);
+    }
+  }
+
+  &--check {
+    width: 38px;
+    height: 38px;
+    margin-left: -2px;
+
+    border: solid 2px @tundora;
+
+    @media (min-width: @tablet-width) {
+      width: 52px;
+      height: 52px;
+
+      margin-left: -5px;
+    }
+
+    .input__logic:checked + &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 18px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      background-image: url("../../img/tick.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (min-width: @tablet-width) {
+        width: 32px;
+        height: 22px;
+        background-size: contain;
+      }
+    }
+
+    &:hover,
+    .input__logic:focus + & {
+      border-color: @downy-light;
+    }
+
+    &:active {
+      border-color: fade(@black; 30%);
+    }
+  }
+
+  &--name {
+    padding-left: 1px;
+    padding-top: 0;
+    padding-bottom: 9px;
+
+    color: @tundora;
+    font-family: inherit;
+    font-weight: normal;
+    .font-height(17px; 18px;);
+
+    outline: none;
+    border: none;
+
+    border-bottom: solid 2px @black;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 18px;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: solid 2px @downy-light;
+    }
+  }
+
+  &--phone,
+  &--email {
+    padding-left: 1px;
+    margin-left: -2px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    color: @tundora;
+    font-family: inherit;
+    font-weight: normal;
+    .font-height(17px; 18px;);
+
+    border: none;
+    outline: none;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 18px;
+    }
+  }
+
+  &--textarea {
+    min-height: 142px;
+    width: 100%;
+
+    padding-left: 14px;
+    padding-top: 15px;
+    margin-top: 18px;
+    padding-bottom: 9px;
+
+    color: @tundora;
+    font-family: inherit;
+    font-weight: normal;
+    .font-height(17px; 18px;);
+
+    border: solid 2px @black;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border: solid 2px @downy-light;
+    }
+  }
+}
+
+.input__icon {
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}

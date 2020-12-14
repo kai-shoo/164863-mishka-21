@@ -1,6 +1,5 @@
 .desc__list {
   display: grid;
-
   .list-style-reset;
   font-family: @font-family-basic;
   font-weight: bold;
@@ -8,6 +7,11 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 110px;
+    grid-auto-flow: column;
+
+    .font-height(20px; 22px);
   }
 
   @media (min-width: @desktop-width) {
@@ -17,9 +21,47 @@
 }
 
 .desc__title {
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 350px 350px;
-    justify-content: center;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 98px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 175px;
+  }
+}
+
+.desc__item {
+  margin-top: 83px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: -32px;
+    transform: translateY(-50%);
+    left: -5px;
+
+    text-align: center;
+
+    width: 55px;
+    height: 38px;
+  }
+
+  each(@icons, {
+    &--icon--@{key}::before {
+      content: url(@value);
+    }
+  });
+
+  @icons: {
+    flower: "../../img/icon-1.svg";
+    style: "../../img/icon-2.svg";
+    heart: "../../img/icon-3.svg";
+    ball: "../../img/icon-4.svg";
+    rocket: "../../img/icon-5.svg";
+    gift: "../../img/icon-6.svg";
+  };
 }

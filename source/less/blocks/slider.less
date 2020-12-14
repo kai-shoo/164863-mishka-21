@@ -1,16 +1,44 @@
 .slider {
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    height: 457px;
+    padding-top: 83px;
+
+    background-image: url("../../img/review-bg.png");
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: max-content;
+
+    background-position: 50px;
   }
 }
 
+.slider__item:not(:first-child) {
+  display: none;
+}
+
+.slider__item {
+  margin-bottom: 19px;
+}
+
 .slider__title {
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: -1;
+
+    margin-bottom: 32px;
+    height: max-content;
   }
 }
 
@@ -26,8 +54,8 @@
 .slider__button {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 78px;
+    right: -37px;
     transform: translate(-50%);
     width: 175px;
   }
@@ -47,10 +75,15 @@
     position: absolute;
     width: 180px;
     border: none;
-    bottom: 0;
-    right: 40px;
+    bottom: 34px;
+    right: 47px;
 
-    transform: translateY(45%);
+    transform: translateY(50%);
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -13px;
+    right: 47px;
   }
 }
 
@@ -69,5 +102,13 @@
     @media (min-width: @tablet-width) {
       border: none;
     }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

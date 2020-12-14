@@ -3,8 +3,14 @@
   flex-direction: column;
 }
 
+.review__title {
+  margin-bottom: 40px;
+}
+
 .review__block-quote {
   margin-left: 0;
+  margin-top: 0;
+  width: 100%;
 }
 
 .review__quote {
@@ -13,6 +19,18 @@
   font-weight: normal;
   color: @tundora;
   .font-height(15px; 30px);
+
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    .font-height(17px; 30px);
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
 }
 
 .review__author {
