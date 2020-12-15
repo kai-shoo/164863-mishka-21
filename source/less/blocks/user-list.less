@@ -48,6 +48,20 @@
 
 .user-list__icon {
   position: absolute;
+
+  &--search {
+    fill: black;
+    opacity: 0.2;
+  }
+}
+
+.user-list__search:hover .user-list__icon--search {
+  opacity: 1;
+  fill: @downy;
+}
+
+.user-list__search:active .user-list__icon--search {
+  opacity: 0.3;
 }
 
 .user-list__search {
