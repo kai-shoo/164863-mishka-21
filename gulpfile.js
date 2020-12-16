@@ -147,12 +147,14 @@ const reload = (done) => {
   done();
 };
 
+exports.reload = reload;
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", gulp.series(html, reload));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
 const build = gulp.series(

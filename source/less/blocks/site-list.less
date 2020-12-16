@@ -1,5 +1,12 @@
 .site-list {
   .list-style-reset;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+  }
 }
 
 .site-list__item {
@@ -8,6 +15,14 @@
 
   &:nth-child(n + 3) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+
+    .font-height(15px;24px);
+
+    border-top: none;
   }
 }
 
@@ -24,5 +39,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 65px;
+
+    margin-right: 15px;
   }
 }
