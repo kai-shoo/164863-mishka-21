@@ -7,7 +7,7 @@
 
 .page__text {
   padding-top: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 
   font-family: @font-family-basic;
   font-style: normal;
@@ -64,23 +64,6 @@
 
     .font-height(53px; 57px;);
   }
-
-  &--wavy {
-    @media (min-width: @tablet-width) {
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-
-        width: 100vw;
-        height: 24px;
-        max-height: 34px;
-
-        background-repeat: repeat-x;
-        background-image: url("../../img/zigzag-line-links.svg");
-      }
-    }
-  }
 }
 
 .page__body {
@@ -97,11 +80,12 @@
   font-weight: bold;
 
   background-color: white;
+  border-top: @border-head;
+  border-bottom: @border-head;
 
-  @media (min-width: @desktop-width) {
-    max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
+  @media (min-width: @tablet-width) {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 

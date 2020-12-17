@@ -26,7 +26,7 @@
             />
           </picture>
         </a>
-        <button class="main-nav__toggle">
+        <button class="main-nav__toggle main-nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list main-nav__list--site site-list">
@@ -44,7 +44,7 @@
           </li>
         </ul>
         <ul class="main-nav__list main-nav__list--user user-list">
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--search">
             <a href="#" class="user-list__link user-list__search">
               <svg
                 class="user-list__icon user-list__icon--search"
@@ -59,14 +59,18 @@
           </li>
           <li class="user-list__item user-list__item--cart">
             <a href="#" class="user-list__link user-list__cart">
-              <svg class="user-list__cart-icon" width="21" height="18">
+              <svg
+                class="user-list__icon user-list__icon--cart"
+                width="21"
+                height="18"
+              >
                 <use xlink:href="img/sprite.svg#cart"></use>
               </svg>
               <span> Корзина: пока пуста</span>
             </a>
           </li>
         </ul>
-        <p class="main-nav__note">Бесплатная доставка по Росии</p>
+        <p class="main-nav__note">Бесплатная доставка по России</p>
       </nav>
     </header>
 
