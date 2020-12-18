@@ -79,7 +79,7 @@
       display: grid;
       grid-template-columns: 170px 1fr;
       padding-top: 67px;
-      padding-bottom: 9px;
+      padding-bottom: 20px;
     }
 
     @media (min-width: @desktop-width) {
@@ -197,7 +197,7 @@
 
       margin-right: 30px;
       margin-top: 8px;
-      width: calc(100vw - 120px);
+      width: 200px;
       height: 1px;
 
       background-color: @downy;
@@ -257,6 +257,10 @@
   }
 
   &--email {
+    &::after {
+      width: 180px;
+    }
+
     @media (min-width: @tablet-width) {
       top: 43px;
       left: 50px;

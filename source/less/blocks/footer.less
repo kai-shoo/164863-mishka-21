@@ -18,8 +18,20 @@
 }
 
 .footer__logo {
+  display: flex;
+
+  fill: black;
+
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  &:hover {
+    fill: @puerto-rico;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

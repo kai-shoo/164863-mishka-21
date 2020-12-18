@@ -3,6 +3,8 @@
 
   padding-bottom: 10px;
 
+  transition: box-shadow 0.1s ease-in-out;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -42,6 +44,15 @@
     @media (min-width: @desktop-width) {
       justify-content: space-between;
       height: 100%;
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -84,6 +95,14 @@
 
   @media (min-width: @tablet-width) {
     .font-height(20px; 24px);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -131,5 +150,20 @@
     height: 462px;
 
     object-fit: cover;
+  }
+}
+
+.product__add-to-cart {
+  fill: @black;
+  opacity: 0.2;
+
+  &:hover {
+    fill: @downy;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @downy;
+    opacity: 0.3;
   }
 }

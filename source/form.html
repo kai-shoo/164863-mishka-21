@@ -10,7 +10,7 @@
   <body class="page__body">
     <header class="page__header">
       <nav class="main-nav">
-        <a href="#" class="main-nav__logo logo">
+        <a href="index.html" class="main-nav__logo logo">
           <picture>
             <source
               media="(min-width: 1150px)"
@@ -34,7 +34,7 @@
             <a href="catalog.html" class="site-list__link">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html" class="site-list__link">Вязание на заказ</a>
+            <a href="#" class="site-list__link">Вязание на заказ</a>
           </li>
           <li class="site-list__item">
             <a href="#" class="site-list__link">Новые поступления</a>
@@ -76,9 +76,7 @@
 
     <main class="page__form">
       <div class="wrapper wrapper--title">
-        <h1 class="page__title page__title--wavy container">
-          Вязание на заказ
-        </h1>
+        <h1 class="page__title page__title--wavy">Вязание на заказ</h1>
       </div>
       <section>
         <h2 class="visually-hidden">Форма заказа</h2>
@@ -267,8 +265,10 @@
 
     <footer class="wrapper">
       <div class="footer container">
-        <a href="#" class="footer__logo logo">
-          <img src="img/mishka-logo-mobile.svg" alt="Логотип магазина Мишка" />
+        <a href="index.html" class="footer__logo">
+          <svg width="102" height="34">
+            <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
+          </svg>
         </a>
         <div class="footer__social social">
           <ul class="social__list">
