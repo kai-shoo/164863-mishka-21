@@ -4,6 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Мишка</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Проект интенсива HTML Academy: Мишка" />
+    <link
+      rel="preload"
+      href="fonts/opensansbold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/opensans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
@@ -26,7 +43,7 @@
             />
           </picture>
         </a>
-        <button class="main-nav__toggle main-nav__toggle">
+        <button class="main-nav__toggle main-nav__toggle--nojs">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list main-nav__list--site site-list">
@@ -45,7 +62,11 @@
         </ul>
         <ul class="main-nav__list main-nav__list--user user-list">
           <li class="user-list__item user-list__item--search">
-            <a href="#" class="user-list__link user-list__search">
+            <a
+              href="#"
+              class="user-list__link user-list__search"
+              aria-label="Поиск"
+            >
               <svg
                 class="user-list__icon user-list__icon--search"
                 width="18"
@@ -137,7 +158,7 @@
               <p class="product__parameters">Рост 30 см, вес 200 г</p>
             </div>
             <div class="product__wrapper product__wrapper--buy">
-              <p class="product__price">1200 руб.</p>
+              <p class="product__price price">1200 руб.</p>
               <a
                 class="product__add-to-cart"
                 href="#"
@@ -207,7 +228,7 @@
               <p class="product__parameters">Диаметр 15 см, высота 10 см</p>
             </div>
             <div class="product__wrapper product__wrapper--buy">
-              <p class="product__price">690 руб.</p>
+              <p class="product__price price">690 руб.</p>
               <a
                 class="product__add-to-cart"
                 href="#"
@@ -279,7 +300,7 @@
               <p class="product__parameters">Диаметр 30 см, высота 30 см</p>
             </div>
             <div class="product__wrapper product__wrapper--buy">
-              <p class="product__price">1500 руб.</p>
+              <p class="product__price price">1500 руб.</p>
               <a
                 class="product__add-to-cart"
                 href="#"
@@ -326,6 +347,7 @@
                 src="img/video-mobile.jpg"
                 srcset="img/video-mobile@2x.jpg 2x"
                 alt="Первый кадр видео"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -334,7 +356,10 @@
               По просьбам наших любимых фолловеров мы сняли для вас подробное
               видео о&nbsp;том, как появляются наши товары.
             </p>
-            <a class="video-promo__button button button button--fullwidth">
+            <a
+              class="video-promo__button button button button--fullwidth"
+              href="#"
+            >
               Сделать заказ
             </a>
           </div>
@@ -344,7 +369,7 @@
 
     <footer class="wrapper">
       <div class="footer container">
-        <a href="index.html" class="footer__logo">
+        <a href="index.html" class="footer__logo" aria-label="логотип">
           <svg width="102" height="34">
             <use xlink:href="img/sprite.svg#mishka-logo-mobile"></use>
           </svg>
@@ -382,6 +407,7 @@
           <a
             class="copyright__link"
             href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Html Academy"
           >
             <svg width="27" height="34">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
@@ -390,7 +416,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal--cart modal--hidden">
       <div class="modal__window cart container">
         <h2 class="cart__title">Добавить в&nbsp;корзину</h2>
         <form class="cart__form" action="post">
@@ -428,5 +454,7 @@
         </form>
       </div>
     </div>
+    <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

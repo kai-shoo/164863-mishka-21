@@ -2,8 +2,8 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    height: 457px;
     padding-top: 83px;
+    height: 457px;
 
     background-image: url("../../img/review-bg.png");
     background-repeat: no-repeat;
@@ -16,14 +16,23 @@
 
     background-position: 50px;
   }
-}
 
-.slider__item:not(:first-child) {
-  display: none;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/review-bg@2x.png");
+    background-size: 350px 457px;
+  }
 }
 
 .slider__item {
   margin-bottom: 19px;
+
+  &--js {
+    position: absolute;
+
+    height: 200px;
+
+    transition: transform 1s;
+  }
 }
 
 .slider__title {
@@ -44,6 +53,13 @@
 
 .slider__list {
   .list-style-reset;
+
+  min-height: 400px;
+
+  &--js {
+    position: relative;
+    overflow: hidden;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
@@ -69,7 +85,7 @@
 
   width: 100%;
   height: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid @mask;
 
   @media (min-width: @tablet-width) {
     position: absolute;
@@ -97,7 +113,7 @@
 
   &--previous {
     transform: rotate(180deg);
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid @mask;
 
     @media (min-width: @tablet-width) {
       border: none;

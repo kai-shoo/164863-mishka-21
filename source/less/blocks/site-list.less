@@ -34,11 +34,16 @@
 
     border-top: none;
     border-bottom: none;
+
+    &:first-child {
+      margin-right: 35px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     &:first-child {
       border-right: @border-head;
+      margin-right: 0;
     }
 
     &:nth-child(-n + 2) {
@@ -64,8 +69,6 @@
 
   @media (min-width: @tablet-width) {
     height: 65px;
-
-    margin-right: 35px;
   }
 
   @media (min-width: @desktop-width) {
