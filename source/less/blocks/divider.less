@@ -1,19 +1,18 @@
 .divider {
   border: none;
-  max-width: 100%;
-  height: 6px;
+  max-width: 1050px;
+  width: 100%;
+  height: 3vw;
 
-  background-image: url("../../img/zigzag-line-mobile.svg");
-  background-repeat: repeat-x;
+  margin-top: 0;
+  margin-bottom: 0;
 
-  @media (min-width: @tablet-width) {
-    height: 20px;
-    background-image: url("../../img/zigzag-line-desktop.svg");
-  }
+  background-image: url("../../img/zigzag-line-desktop.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   @media (min-width: @desktop-width) {
-    height: 23px;
-    background-image: url("../../img/zigzag-line-desktop.svg");
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

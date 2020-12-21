@@ -10,6 +10,17 @@
   }
 }
 
+.input:hover > .input__icon,
+.input:focus-within > .input__icon {
+  fill: @downy;
+  opacity: 1;
+}
+
+.input__box:invalid {
+  box-shadow: none;
+  color: @error-input;
+}
+
 .input__box {
   position: relative;
   background: inherit;
@@ -155,6 +166,7 @@
     outline: none;
 
     @media (min-width: @tablet-width) {
+      width: 100%;
       padding-left: 18px;
     }
   }
@@ -184,6 +196,9 @@
 }
 
 .input__icon {
+  fill: black;
+  opacity: 0.2;
+
   @media (min-width: @tablet-width) {
     margin-right: 20px;
   }

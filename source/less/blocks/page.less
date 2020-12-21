@@ -7,7 +7,7 @@
 
 .page__text {
   padding-top: 3px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 
   font-family: @font-family-basic;
   font-style: normal;
@@ -60,25 +60,9 @@
     margin: 0;
 
     margin-bottom: 0;
+    padding-bottom: 25px;
 
     .font-height(53px; 57px;);
-  }
-
-  &--wavy {
-    @media (min-width: @tablet-width) {
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-
-        width: 100vw;
-        height: 24px;
-        max-height: 34px;
-
-        background-repeat: repeat-x;
-        background-image: url("../../img/zigzag-line-links.svg");
-      }
-    }
   }
 }
 
@@ -91,31 +75,27 @@
 }
 
 .page__header {
-  background-color: white;
   font-family: @font-family-basic;
   .font-height(17px; 24px);
+  font-weight: bold;
 
-  height: 80px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: $border-bottom;
-
-  @media (min-width: @tablet-width) {
-    height: 90px;
-  }
+  background-color: white;
+  border-top: @border-head;
+  border-bottom: @border-head;
 }
 
 .page__promo {
   margin-top: 30px;
-  margin-bottom: 36px;
+  margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     margin-top: 47px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 67px;
   }
 }
 
@@ -123,11 +103,11 @@
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 65px;
+    margin-top: 46px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 74px;
+    margin-top: 58px;
   }
 }
 
@@ -137,6 +117,7 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 83px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -145,7 +126,7 @@
 }
 
 .page__contacts {
-  margin-top: 37px;
+  margin-top: 42px;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
@@ -156,5 +137,30 @@
   @media (min-width: @desktop-width) {
     margin-top: 80px;
     margin-bottom: 105px;
+  }
+}
+
+.page__catalog-block {
+  margin-top: 28px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 113px;
+    margin-bottom: 53px;
+  }
+}
+
+.page__video-promo {
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 100px;
   }
 }

@@ -22,17 +22,22 @@
 
 .contacts__info {
   margin-top: 0;
+  margin-bottom: 65px;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    .font-height(17px; 30px);
     align-items: baseline;
-    margin-top: 30px;
+    margin-top: 24px;
+    margin-bottom: 50px;
+
+    .font-height(17px; 30px);
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     grid-area: channel;
+
+    margin-top: 0;
   }
 }
 
@@ -45,6 +50,8 @@
 }
 
 .contacts__title {
+  position: relative;
+
   margin-bottom: 28px;
 
   font-family: @font-family-basic;
@@ -52,10 +59,28 @@
   font-weight: bold;
   color: @black;
 
+  &::before {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      top: -18px;
+      right: 0;
+
+      height: 81px;
+      width: 47px;
+
+      background-image: url("../img/flag.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -112px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: title;
     align-self: flex-end;
-    margin-bottom: 30px;
+    margin-bottom: 37px;
   }
 }
 
@@ -80,6 +105,7 @@
 
 .contacts__button {
   justify-self: center;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     width: 230px;
@@ -89,6 +115,8 @@
     grid-area: button;
     justify-self: left;
     align-self: flex-end;
+
+    margin-bottom: 12px;
   }
 }
 
@@ -110,4 +138,8 @@
 
 .contacts__definition {
   margin-left: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
 }

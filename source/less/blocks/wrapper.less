@@ -1,4 +1,6 @@
 .wrapper {
+  position: relative;
+
   width: 100%;
 
   background-color: @seashell;
@@ -16,6 +18,20 @@
 
     @media (min-width: @tablet-width) {
       padding-top: 13px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+
+        max-width: 100%;
+        width: 100%;
+        height: clamp(24px, 3vw, 34px);
+
+        background-image: url("../img/zigzag-fill-desktop.svg");
+        background-size: clamp(768px, 100%, 1150px);
+        background-repeat: repeat-x;
+      }
     }
   }
 }

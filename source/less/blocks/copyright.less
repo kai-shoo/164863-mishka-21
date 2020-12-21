@@ -7,11 +7,25 @@
   font-weight: bold;
   .font-height(19px; 18px);
 
+  fill: @downy;
+
   @media (max-width: @mobile-width-only) {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid @copyright;
   }
+
+  &:hover {
+    fill: @puerto-rico;
+  }
+}
+
+.copyright:active > .copyright__link {
+  opacity: 0.3;
 }
 
 .copyright__text {
   margin-right: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }
