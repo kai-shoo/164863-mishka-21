@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 58px;
+  margin-bottom: 55px;
 
   font-family: @font-family-basic;
   font-weight: bold;
@@ -7,7 +7,11 @@
 
   @media (min-width: @tablet-width) {
     .font-height(19px; 18px;);
-    margin-bottom: 53px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 48px;
   }
 }
 
@@ -32,7 +36,7 @@
     flex-wrap: nowrap;
 
     padding-top: 31px;
-    padding-bottom: 21px;
+    padding-bottom: 19px;
 
     @media (min-width: @tablet-width) {
       display: grid;
@@ -54,38 +58,39 @@
     flex-direction: column;
 
     padding-top: 25px;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 
     @media (min-width: @tablet-width) {
       display: grid;
-      grid-template-columns: 150px 1fr 1fr;
-      column-gap: 20px;
+      grid-template-columns: 140px 1fr 1fr;
+      column-gap: 30px;
 
       padding-top: 51px;
       padding-bottom: 29px;
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 177px repeat(3, 265px);
+      grid-template-columns: 180px repeat(3, 263px);
       column-gap: 0;
+      padding-top: 45px;
     }
   }
 
   &--name {
     padding-top: 29px;
-    padding-bottom: 13px;
+    padding-bottom: 11px;
 
     @media (min-width: @tablet-width) {
       display: grid;
       grid-template-columns: 170px 1fr;
       padding-top: 67px;
-      padding-bottom: 20px;
+      padding-bottom: 11px;
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 170px 1fr 170px;
+      grid-template-columns: 179px 1fr 170px;
 
-      padding-bottom: 0;
+      padding-bottom: 10px;
 
       &::after {
         content: "";
@@ -151,7 +156,7 @@
     padding-top: 4px;
     padding-bottom: 12px;
 
-    margin-top: 24px;
+    margin-top: 22px;
 
     @media (min-width: @tablet-width) {
       display: grid;
@@ -161,10 +166,11 @@
 
       padding-top: 32px;
       padding-bottom: 50px;
+      padding-left: 45px;
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 170px 1fr 170px;
+      grid-template-columns: 180px 1fr 170px;
 
       &::after {
         content: "";
@@ -299,6 +305,10 @@
     grid-template-columns: 75px 1fr;
     margin-bottom: 26px;
   }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 78px 1fr;
+  }
 }
 
 .form__check {
@@ -324,7 +334,7 @@
     grid-template-columns: max-content 1fr;
     gap: 25px;
     align-items: baseline;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
 }
 
@@ -394,8 +404,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 218px;
-    padding-right: 218px;
+    padding-left: 225px;
+    padding-right: 225px;
     justify-content: space-between;
   }
 }

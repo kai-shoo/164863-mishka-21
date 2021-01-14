@@ -1,7 +1,7 @@
 "use strict";
 
 const modalCart = document.querySelector(".modal--cart");
-const cartButtons = document.querySelectorAll(".product__add-to-cart");
+const cartButtons = document.querySelectorAll(".show-modal--cart");
 
 const closeModal = function () {
   modalCart.classList.add("modal--hidden");
