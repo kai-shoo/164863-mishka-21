@@ -21,8 +21,10 @@
 }
 
 .contacts__info {
+  overflow: hidden;
+
   margin-top: 0;
-  margin-bottom: 65px;
+  margin-bottom: 62px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -31,13 +33,15 @@
     margin-bottom: 50px;
 
     .font-height(17px; 30px);
+
+    overflow: unset;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     grid-area: channel;
 
-    margin-top: 0;
+    margin-top: 11px;
   }
 }
 
@@ -46,6 +50,11 @@
 
   @media (min-width: @tablet-width) {
     width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
   }
 }
 
@@ -80,7 +89,7 @@
   @media (min-width: @desktop-width) {
     grid-area: title;
     align-self: flex-end;
-    margin-bottom: 37px;
+    margin-bottom: 25px;
   }
 }
 
@@ -91,7 +100,9 @@
 .contacts__email {
   color: @tundora;
   border-bottom: solid 2px @downy;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
+
+  line-height: 25px;
 
   &:hover {
     color: @downy-light;
@@ -100,6 +111,12 @@
 
   &:active {
     border-bottom-color: fade(@downy-light, 10%);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 28px;
+
+    line-height: 30px;
   }
 }
 
@@ -115,15 +132,13 @@
     grid-area: button;
     justify-self: left;
     align-self: flex-end;
-
-    margin-bottom: 12px;
   }
 }
 
 .contacts__map {
   position: relative;
 
-  margin-bottom: 45px;
+  margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;

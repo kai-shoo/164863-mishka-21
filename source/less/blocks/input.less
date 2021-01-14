@@ -1,11 +1,27 @@
 .input {
+  &--phone {
+    padding-bottom: 11px;
+  }
+
   &--phone,
   &--email {
     border-bottom: solid 2px @black;
 
+    @media (min-width: @desktop-width) {
+      padding-bottom: 12px;
+    }
+
     &:hover,
     &:focus-within {
       border-bottom: solid 2px @downy-light;
+    }
+  }
+
+  &--email {
+    @media (min-width: @desktop-width) {
+      padding-top: 14px;
+      padding-bottom: 16px;
+      padding-left: 4px;
     }
   }
 }
@@ -128,7 +144,7 @@
   &--name {
     padding-left: 1px;
     padding-top: 0;
-    padding-bottom: 9px;
+    padding-bottom: 14px;
 
     color: @tundora;
     font-family: inherit;
@@ -147,6 +163,10 @@
     &:hover,
     &:focus {
       border-bottom: solid 2px @downy-light;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 15px;
     }
   }
 
@@ -201,5 +221,9 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 10px;
   }
 }

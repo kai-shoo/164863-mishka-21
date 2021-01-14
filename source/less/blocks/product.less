@@ -42,6 +42,8 @@
     @media (min-width: @desktop-width) {
       justify-content: space-between;
       height: 100%;
+      padding-left: 27px;
+      padding-top: 28px;
     }
 
     &:hover,
@@ -60,7 +62,7 @@
     align-items: center;
 
     padding-top: 8px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     border-top: solid 1px @gallery;
 
     @media (min-width: @tablet-width) {
@@ -73,7 +75,7 @@
     @media (min-width: @desktop-width) {
       margin-top: auto;
       margin-bottom: 11px;
-      padding-top: 20px;
+      padding-top: 16px;
     }
   }
 
@@ -94,7 +96,7 @@
   font-family: @font-family-basic;
   font-style: normal;
   font-weight: bold;
-  .font-height(17px; 24px);
+  .font-height(17px; 23px);
   color: @black;
 
   @media (min-width: @tablet-width) {
@@ -118,11 +120,16 @@
   color: @black;
 
   @media (min-width: @tablet-width) {
+    margin-left: 1px;
+    margin-bottom: 20px;
+    margin-top: 17px;
     .font-height(17px; 24px;);
   }
 
   @media (min-width: @desktop-width) {
     margin-top: auto;
+    margin-bottom: 13px;
+    margin-left: -1px;
   }
 }
 
@@ -144,14 +151,18 @@
 .product__image {
   display: block;
   margin-bottom: 28px;
+  width: 260px;
+  height: 195px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    width: 333px;
+    height: 333px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 316px;
-    height: 462px;
+    width: 315px;
+    height: 461px;
 
     object-fit: cover;
   }
@@ -169,5 +180,9 @@
   &:active {
     fill: @downy;
     opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 11px;
   }
 }
