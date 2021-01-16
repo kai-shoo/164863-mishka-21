@@ -133,7 +133,7 @@
     width: 40px;
     height: 62px;
 
-    background-image: url("../../img/lamp.svg");
+    background-image: url("../img/lamp.svg");
   }
 
   &--icon--lego::before {
@@ -141,7 +141,7 @@
     width: 60px;
     height: 60px;
 
-    background-image: url("../../img/lego.svg");
+    background-image: url("../img/lego.svg");
   }
 
   &::after {
@@ -170,11 +170,11 @@
     padding-left: 36px;
   }
 
-  &:nth-child(odd) {
+  .identity__item:nth-child(odd) & {
     background-color: @downy;
   }
 
-  &:nth-child(even) {
+  .identity__item:nth-child(even) & {
     background-color: @fountain-blue;
   }
 
@@ -183,11 +183,11 @@
   &:hover {
     padding-top: 19px;
 
-    &:nth-child(odd) {
+    .identity__item:nth-child(odd) & {
       background-color: @viking;
     }
 
-    &:nth-child(even) {
+    .identity__item:nth-child(even) & {
       background-color: @puerto-rico;
     }
 

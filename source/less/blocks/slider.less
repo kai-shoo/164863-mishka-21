@@ -1,11 +1,12 @@
 .slider {
   position: relative;
 
+  overflow: hidden;
+
   @media (min-width: @tablet-width) {
     padding-top: 83px;
-    height: 457px;
 
-    background-image: url("../../img/review-bg.png");
+    background-image: url("../img/review-bg.png");
     background-repeat: no-repeat;
   }
 
@@ -18,8 +19,10 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/review-bg@2x.png");
-    background-size: 350px 457px;
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/review-bg@2x.png");
+      background-size: 350px 457px;
+    }
   }
 }
 
@@ -27,9 +30,10 @@
   margin-bottom: 19px;
 
   &--js {
-    position: absolute;
+    position: relative;
 
-    height: 200px;
+    width: 100%;
+    min-width: 100%;
 
     transition: transform 1s;
   }
@@ -54,11 +58,15 @@
 .slider__list {
   .list-style-reset;
 
-  min-height: 400px;
-
   &--js {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    column-gap: 100%;
+
     position: relative;
-    overflow: hidden;
+
+    transition: transform 1s;
   }
 
   @media (min-width: @desktop-width) {
@@ -91,14 +99,14 @@
     position: absolute;
     width: 180px;
     border: none;
-    bottom: 34px;
+    bottom: 18px;
     right: 47px;
 
     transform: translateY(50%);
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 85px;
+    bottom: 25px;
     right: 47px;
     margin-bottom: 37px;
   }
@@ -108,7 +116,7 @@
   border: none;
   width: 50%;
   background-color: inherit;
-  background-image: url("../../img/huge-arrow-right.svg");
+  background-image: url("../img/huge-arrow-right.svg");
   background-repeat: no-repeat;
   background-position: 50%;
 

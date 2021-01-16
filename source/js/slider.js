@@ -1,6 +1,7 @@
 "use strict";
 
-const slider = document.querySelector(".slider__list");
+const slider = document.querySelector(".slider");
+const sliderList = document.querySelector(".slider__list");
 const slides = document.querySelectorAll(".slider__item");
 const maxSlide = slides.length;
 let curSlide = 0;
@@ -8,13 +9,12 @@ let curSlide = 0;
 const btnPrevSlide = document.querySelector(".slider__control--previous");
 const btnNextSlide = document.querySelector(".slider__control--next");
 
+slider.classList.add("slider--js");
 slides.forEach((item) => item.classList.add("slider__item--js"));
-slider.classList.add("slider__list--js");
+sliderList.classList.add("slider__list--js");
 
 const goToSlide = function (slide) {
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${130 * (i - slide)}%)`)
-  );
+  sliderList.style.transform = `translateX(${-200 * slide}%)`;
 };
 
 const nextSlide = function () {
@@ -34,8 +34,6 @@ const prevSlide = function () {
   }
   goToSlide(curSlide);
 };
-
-goToSlide(0);
 
 btnNextSlide.addEventListener("click", nextSlide);
 btnPrevSlide.addEventListener("click", prevSlide);
